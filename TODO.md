@@ -1,7 +1,5 @@
 ## Tasks
-- Check if caché is working as intended
-- Check for missing information
-- README
+- Add `what is toki pona` to `README` and `About`
 - Build script (soooo many .js files :P)
 
 ## Preset texts
