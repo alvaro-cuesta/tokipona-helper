@@ -1,23 +1,25 @@
 ## Tasks
 - Add `what is toki pona` to `README` and `About`
 - Build script (soooo many .js files :P)
+- Add preset texts
+- Add dictionaries
+
+## UX
+- Add more 'first time' tooltips
+- Test popup timing and sizes
 
 ## Preset texts
-- Populate directory
 - Random text on start if text is empty
-- URL vars `?text=<filename>` and `?textURL=<url>`
+- URL vars `?text=<filename>` and `?textURL=<encodedurl>`
 - Proper links in list
 
 ## Custom dictionaries
-- Populate directory
 - Pretty version
 - URL var `?dict=<encodedurl>` *(is this safe for clients?)*
 - Proper links in list
 
 ## UI
-- Add more 'first guide' tooltips
 - Help tooltip shouldn't be shown THIS often
-- Test popup timing and sizes
 - Support link to specific word on RichText click
 - Blockquote auto-translation
   - On init or also when text changes anyhow?
