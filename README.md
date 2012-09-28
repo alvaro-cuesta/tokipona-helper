@@ -19,22 +19,19 @@ Clone [master](https://github.com/alvaro-cuesta/tokipona-helper/) and run your o
 - PHP enabled host (only needed for file-lists caché, can be replaced by static file.)
 
 ##  What is toki pona?
+*(TODO)*
 
 ## Contact
 Find me as `janAwalo` in #tokipona @ [FreeNode](http://webchat.freenode.net/).
 
 ## Contributors
-Sadly, this list is empty. Be the first on to collaborate!
+Sadly, this list is empty. **Be the first on to collaborate!**
 
-[Dictionaries](https://github.com/alvaro-cuesta/tokipona-helper/blob/master/dictionary/) are desperately needed. See [tokipona.json](https://github.com/alvaro-cuesta/tokipona-helper/blob/master/dictionary/tokipona.json) for an example.
-
-I'm (slowly) working in adapting [jan Pije's public domain lessons](http://rowa.giso.de/languages/toki-pona/english/toki-pona-lessons.pdf) but I could use some help.
+[Dictionaries](https://github.com/alvaro-cuesta/tokipona-helper/blob/master/dictionary/) are desperately needed. See [tokipona.json](https://github.com/alvaro-cuesta/tokipona-helper/blob/master/dictionary/tokipona.json) for an example. I'm (slowly) working in adapting [jan Pije's public domain lessons](http://rowa.giso.de/languages/toki-pona/english/toki-pona-lessons.pdf) but I could use some help.
 
 Alternate dictionaries are very welcome too: old toki pona, new toki pona, with banned words, other destination languages, etc.
 
-Suggestions, ideas, new meanings, but reports, etc. are VERY welcome!
-
-You can also submit your texts to be included in the preset texts.
+Suggestions, ideas, new meanings, but reports, etc. are VERY welcome! You can also submit your texts to be included in the preset texts.
 
 ## License
 All rights reserved. *(TODO: choose free license.)*
