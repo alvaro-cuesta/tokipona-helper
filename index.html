@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toki pona reading helper</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" type="text/css" href="lib/jquery.qtip.min.css">
+	<link rel="stylesheet" type="text/css" href="tokipona.css">
+
+	<script src="lib/jquery.min.js" type="text/javascript"></script>
+	<script src="lib/jquery.history.js" type="text/javascript"></script>
+	<script src="lib/jquery.qtip.min.js" type="text/javascript"></script>
+
+	<script src="js/config.js" type="text/javascript"></script>
+	<script src="js/utils.js" type="text/javascript"></script>
+
+	<script src="js/namespace/cache.js" type="text/javascript"></script>
+	<script src="js/namespace/navigation.js" type="text/javascript"></script>
+	<script src="js/namespace/richText.js" type="text/javascript"></script>
+
+	<script src="js/section/menu.js" type="text/javascript"></script>
+	<script src="js/section/tool.js" type="text/javascript"></script>
+	<script src="js/section/textList.js" type="text/javascript"></script>
+	<script src="js/section/dictionaryList.js" type="text/javascript"></script>
+	<script src="js/section/dictionaryDetail.js" type="text/javascript"></script>
+	<script src="js/section/about.js" type="text/javascript"></script>
+	<script src="js/section/help.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="header">
+		<h1>Toki pona</h1> <h3>reading helper (prototype version)</h3>
+		<div id="menu">
+			<a href="tool/" id="tool" class="light">tool</a> 
+			<a href="text/" id="text" class="light">text</a> 
+			<a href="dictionary/" id="dictionary" class="light">dictionary</a> 
+			<a href="about/" id="about" class="light">about</a> 
+			<a href="help/" id="help" class="light">help</a> 
+		</div>
+	</div>
+	<div id="content">
+		<div id="toolSection" class="section">
+			<form id="source">
+				<textarea name="sourceText"></textarea>
+			</form>
+			<a href="." id="tokiLink">Link to this text!</a>
+			<div id="dest"></div>
+		</div>
+		<div id="textSection" class="section">
+			<h2>Texts</h2>
+			<div id="textList"></div>
+		</div>
+		<div id="dictionarySection" class="section">
+			<h2>Dictionaries</h2>
+			<div id="dictionaryList"></div>
+		</div>
+		<div id="aboutSection" class="section">
+			<h2>About...</h2>
+			<h3>What is toki pona?</h3>
+			<p>a</p>
+			<p>b</p>
+			<p>c</p>
+
+			<h3>What is toki pona reading helper?</h3>
+			<p>This tool generates toki pona text tagged with tooltips with dictionary info.</p>
+			<p>This webpage features <a href="http://validator.w3.org/" id="validHTML" class="dark">valid HTML5</a> and (almost) <a href="http://jigsaw.w3.org/css-validator/" id="validCSS" class="dark">valid CSS</a> (except for the tooltip plugin.)</p>
+
+			<h3>Contact</h3>
+			<p>This is an opensource project, freely available at <a href="http://github.com/alvaro-cuesta/tokipona-helper/" class="dark">tokipona-helper</a>'s GitHub repository.</p>
+			<p>Find me as kaoD/jan Awalo in #tokipona @ <a href="http://webchat.freenode.net/" class="dark">FreeNode</a>.</p>
+
+			<h3>Collaborating</h3>
+			<p>Currently, dictionaries are the top priority.</p>
+			<p>I'm (slowly) working in adapting <a href="http://rowa.giso.de/languages/toki-pona/english/toki-pona-lessons.pdf" class="dark">jan Pije's public domain lessons</a> but I could use some help.</p>
+			<p>Alternate dictionaries are very welcome: old toki pona, new toki pona, with banned words, other destination languages, etc.</p>
+			<p>Suggestions, ideas, new meanings, but reports, etc. are VERY welcome!</p>
+			<p>You can also submit your texts to be included.</p>
+		</div>
+		<div id="helpSection" class="section">
+			<h2>Help</h2>
+			<h3>Basic usage</h3>
+			<p>Just type in the textbox and toki pona text will appear below it, just like this:</p>
+			<blockquote id="example1"></blockquote>
+			<p>Words are tagged with dictionary tooltips. Keep your mouse over any word to show its meaning.</p>
+			<p>Unknown/invalid words are marked in deep red.</p>
+			<blockquote id="example2"></blockquote>
+			<p>Foreign (capitalized) words are marked in deep green.</p>
+			<blockquote id="example3"></blockquote>
+
+			<h3>Dictionaries</h3>
+			<p>Select any dictionary in the list to enable it.</p>
+			<p>Look closely! Dictionary settings are saved in your browser's URL. You can even share this link!</p>
+			<p>"view" shows a handy HTML formatted version of the dictionary.</p>
+			<p>"raw" downloads the dictionary as a <a href="http://en.wikipedia.org/wiki/JSON" class="dark">JSON</a> file.</p>
+
+			<h3>Preset texts</h3>
+			<p>These are good to practice toki pona.</p>
+			<p>Selecting any item loads the text into the textarea.</p>
+			<p>"raw" downloads the text as plaintext file.</p>
+
+			<h3>Link sharing</h3>
+			<p>A special anchor titled "link" (below the textarea) will always point to your current text and dictionary.</p>
+			<p>You can bookmark or share this link to share texts and dictionary settings.</p>
+			<p>Be careful: long URLs may fail under some browsers.</p>
+		</div>
+	</div>
+</body>
+</html>
