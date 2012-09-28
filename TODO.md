@@ -24,11 +24,6 @@
 - Blockquote auto-translation
 - URL generation must do comparison with ALL INITIAL values
 - Proper "Link to this text" link
-
-## Known Bugs
-- RichText does not ignore punctuation
-- Textarea's normal/min/max width/height
-- Textarea save is called in all state changes
   
 ## Optional
 - Fix for mobile phone
