@@ -30,9 +30,12 @@ function listDirectoryIfModified($directory, $filter_extension) {
 	}
 	 
 	echo "[";
-	foreach (getDirectoryList($directory) as $filename) {
+	$dirList = getDirectoryList($directory);
+	foreach ($dirList as $index=>$filename) {
 		if ($filter_extension && endsWith($filename, $filter_extension)) {
 			echo '"' . $filename . '"';
+			if ($index < count($dirList) - 1)
+				echo ", ";
 		}
 	}
 	echo "]";
