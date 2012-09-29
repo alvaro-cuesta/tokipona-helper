@@ -46,7 +46,7 @@
 		
 		// Synchronize textarea with state
 		if (state.section != 'tool') { // If we're swtiching OUT
-			Toki_Navigation.replaceState({text: $textarea.val()})
+			Toki_Navigation.pushState({text: $textarea.val()}, true);
 		} else { // Switching IN
 			$textarea.val(state.text);
 		}
