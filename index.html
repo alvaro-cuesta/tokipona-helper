@@ -27,14 +27,10 @@
 </head>
 <body>
 	<div id="header">
-		<h1>Toki pona</h1> <h3>reading helper (prototype version)</h3>
-		<div id="menu">
-			<a href="tool/" id="tool" class="light">tool</a> 
-			<a href="text/" id="text" class="light">text</a> 
-			<a href="dictionary/" id="dictionary" class="light">dictionary</a> 
-			<a href="about/" id="about" class="light">about</a> 
-			<a href="help/" id="help" class="light">help</a> 
-		</div>
+		<h1>Toki pona</h1> <h2>reading helper</h2> <h3>(prototype version)</h3>
+		<ul class="menu">
+			<li><a id="tool">tool</a></li><li><a id="text">text</a></li><li><a id="dictionary">dictionary</a></li><li><a id="about">about</a></li><li><a id="help">help</a></li>
+		</ul>
 	</div>
 	<div id="content">
 		<div id="toolSection" class="section">
@@ -50,7 +46,7 @@
 		</div>
 		<div id="dictionarySection" class="section">
 			<h2>Dictionaries</h2>
-			<div id="dictionaryList"></div>
+			<form id="dictionaryList"></form>
 		</div>
 		<div id="aboutSection" class="section">
 			<h2>About...</h2>
@@ -61,15 +57,15 @@
 
 			<h3>What is toki pona reading helper?</h3>
 			<p>This tool generates toki pona text tagged with tooltips with dictionary info.</p>
-			<p>This webpage features <a href="http://validator.w3.org/" id="validHTML" class="dark">valid HTML5</a> and (almost) <a href="http://jigsaw.w3.org/css-validator/" id="validCSS" class="dark">valid CSS</a> (except for the tooltip plugin.)</p>
+			<p>This webpage features <a href="http://validator.w3.org/" id="validHTML">valid HTML5</a> and (almost) <a href="http://jigsaw.w3.org/css-validator/" id="validCSS">valid CSS</a> (except for the tooltip plugin.)</p>
 
 			<h3>Contact</h3>
-			<p>This is an opensource project, freely available at <a href="http://github.com/alvaro-cuesta/tokipona-helper/" class="dark">tokipona-helper</a>'s GitHub repository.</p>
-			<p>Find me as kaoD/jan Awalo in #tokipona @ <a href="http://webchat.freenode.net/" class="dark">FreeNode</a>.</p>
+			<p>This is an opensource project, freely available at <a href="http://github.com/alvaro-cuesta/tokipona-helper/">tokipona-helper</a>'s GitHub repository.</p>
+			<p>Find me as kaoD/jan Awalo in #tokipona @ <a href="http://webchat.freenode.net/">FreeNode</a>.</p>
 
 			<h3>Collaborating</h3>
 			<p>Currently, dictionaries are the top priority.</p>
-			<p>I'm (slowly) working in adapting <a href="http://rowa.giso.de/languages/toki-pona/english/toki-pona-lessons.pdf" class="dark">jan Pije's public domain lessons</a> but I could use some help.</p>
+			<p>I'm (slowly) working in adapting <a href="http://rowa.giso.de/languages/toki-pona/english/toki-pona-lessons.pdf">jan Pije's public domain lessons</a> but I could use some help.</p>
 			<p>Alternate dictionaries are very welcome: old toki pona, new toki pona, with banned words, other destination languages, etc.</p>
 			<p>Suggestions, ideas, new meanings, but reports, etc. are VERY welcome!</p>
 			<p>You can also submit your texts to be included in the preset texts.</p>
@@ -95,7 +91,7 @@
 			<p>Select any dictionary in the list to enable it.</p>
 			<p>Look closely! Dictionary settings are saved in your browser's URL. You can even share this link!</p>
 			<p>"view" shows a handy HTML formatted version of the dictionary.</p>
-			<p>"raw" downloads the dictionary as a <a href="http://en.wikipedia.org/wiki/JSON" class="dark">JSON</a> file.</p>
+			<p>"raw" downloads the dictionary as a <a href="http://en.wikipedia.org/wiki/JSON">JSON</a> file.</p>
 
 			<h3>Preset texts</h3>
 			<p>These are good to practice toki pona.</p>

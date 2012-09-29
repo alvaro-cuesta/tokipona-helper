@@ -6,46 +6,47 @@ html, body {
 	height: 100%;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
 }
-.auto-tokipona {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 50px;
-  padding-left: 15px;
-  border-left: 3px solid #ccc;
-}
 /* HEADER */
 div#header {
 	background-color: black;
-	padding: 5px 5px 0px 5px;
+	padding: 5px 0px 0px 5px;
 }
-div#header > * {
+div#header * {
 	color: white;
 	display: inline;
 }
+div#header h2 {
+	font-size: 1.17em;
+}
+div#header h3 {
+	font-size: 1.15em;
+	font-weight: normal;
+}
 /* MENU */
-div#header > div#menu {
-	padding: 15px 7px 0px 0px;
+div#header > ul.menu {
+	padding: 13px 0;
 	float: right;
 }
-div#menu a,
-div#menu a:link,
-div#menu a:visited {
-	font-weight: bold;
+ul.menu a,
+ul.menu a:link,
+ul.menu a:visited {
+	text-decoration: none;
 	color: #ccc;
+	padding: 5px 10px 5px 10px;
+	background-color: #222;
 }
-div#menu a:hover {
-	font-weight: bold;
+ul.menu a:hover {
 	color: white;
+	background-color: #333;
 }
 
-div#menu a:active {
-	font-weight: bold;
+ul.menu a:active {
 	color: #aaa;
 }
 /* CONTENT */
 div#content {
 	height: 70%; /* TODO: FIX */
-	padding: 10px 20px 20px 10px;
+	padding: 0 20px 20px 10px;
 }
 div#content > .section {
 	display: none;
@@ -58,7 +59,6 @@ div#content h3 {
 div#content p {
 	margin: 1px 0 0 5px;
 }
-div#content a,
 div#content a:link,
 div#content a:visited {
 	font-weight: bold;
@@ -72,14 +72,6 @@ div#content a:hover {
 div#content a:active {
 	font-weight: bold;
 	color: #000;
-}
-div#content ul,
-div#content ol {
-	list-style-type: square;
-	padding-left: 20px;
-}
-div#content li {
-	margin-left: 10px;
 }
 /* TOOL */
 div#toolSection > form#source {
@@ -114,4 +106,27 @@ div#toolSection > p#dest {
 	padding-left: 0.7em;
 }
 .meaning {
+}
+/* STYLING */
+.auto-tokipona {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 3px solid #ccc;
+}
+#content ul:not(.nobullet),
+#content ol:not(.nobullet) {
+	list-style-type: square;
+	padding-left: 20px;
+}
+ul.nobullet,
+ol.nobullet {
+	list-style-type: none;
+}
+#content li {
+	margin-left: 10px;
+}
+input[type="radio"] {
+	margin-right: 5px;
 }

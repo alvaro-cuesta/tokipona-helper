@@ -1,8 +1,7 @@
 (function(window, $, undefined) {$(function() {
 	/* Enable links AJAX navigation */
-	$('div#menu > a').click(function(e){
-		e.preventDefault();
-		Toki_Navigation.go($(this).attr('id'));
+	$('ul.menu a').each(function() {
+		$(this).linkState({section: $(this).attr('id')});
 	});
 		
 	/* Show help notification */
