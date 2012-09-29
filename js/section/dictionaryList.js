@@ -2,31 +2,34 @@
 	var MODEL_URL = 'dictionary/';
 
 	function buildDictionaryList(dictionaryList) {
-		var $list = $('<ul>');
+		var state = window.History.getState().data;
+		var $list = $('<ul class="nobullet">');
 		$.each(dictionaryList, function(index, filename) {
-			var $normalLink = $('<a href="" class="dark">' + filename + '</a>'),
-				$prettyLink = $('<a href="" class="dark">pretty</a>'),
-				$rawLink = $('<a href=' + MODEL_URL + filename + '" class="dark">raw</a>');
-
+			var $dictionaryRadio = $('<input type="radio" name="dictionaries" value="dictionary/' + filename + '">'),
+				$normalLink = $('<a href="" class="dark">' + filename + '</a>'),
+				$rawLink = $('<a href="' + MODEL_URL + filename + '" class="dark">raw</a>');
+			
+			if (state.dictionary === MODEL_URL + filename) {
+				$dictionaryRadio.attr('checked', true);
+			}
+			
+			$dictionaryRadio.click(function() {
+				Toki_Navigation.putState({dictionary: $(this).attr('value')});
+			});
+			
 			$normalLink.linkState({
-				section: 'tool',
+				section: 'detail',
 				dictionary: MODEL_URL + filename
 			}, {
-				section: 'tool',
+				section: 'detail',
 				dictionary: MODEL_URL + filename,
 				text: ""
 			});
 			
-			$prettyLink.linkState({
-				section: 'detail',
-				dictionary: MODEL_URL + filename
-			});
-			
 			var $listItem = $('<li>')
+				.append($dictionaryRadio)
 				.append($normalLink)
 				.append(' (')
-				.append($prettyLink)
-				.append(', ')
 				.append($rawLink)
 				.append(')');
 		
@@ -39,7 +42,7 @@
 	Toki_Cache.fetch(
 		MODEL_URL,
 		function(dictionaryList) {
-			$('div#dictionaryList').html(
+			$('form#dictionaryList').html(
 				buildDictionaryList(dictionaryList));
 		},
 		function(data, error) {
