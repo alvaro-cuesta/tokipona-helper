@@ -2,13 +2,17 @@
 	var MODEL_URL = 'text/';
 
 	function buildTextList(textList) {
-		var $list = $('<ul>');
+		var $list = $('<ul class="list">');
 
 		$.each(textList, function(index, filename) {
 			var $normalLink = $('<a href="" class="dark">' + filename + '</a>'),
 				$rawLink = $('<a href="' + MODEL_URL + filename + '" class="dark">raw</a>');
 
-			$normalLink.linkState(); // TODO
+			$normalLink.linkState({
+				section: 'detail',
+				dictionary: MODEL_URL + filename,
+				textURL: MODEL_URL + filename
+			});
 			
 			var $listItem = $('<li>')
 				.append($normalLink)
