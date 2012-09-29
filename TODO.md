@@ -23,9 +23,10 @@
 - Support link to specific word on RichText click
 - Blockquote auto-translation
   - On init or also when text changes anyhow?
-  - Perhaps with an optional `data-dictionary` attr?
 - URL generation must do comparison with ALL INITIAL values
 - Proper "Link to this text" link
+- Replace textarea \n with <br>
+- Replace textarea \n\n with <p> enclosing
   
 ## Optional
 - Fix for mobile phone

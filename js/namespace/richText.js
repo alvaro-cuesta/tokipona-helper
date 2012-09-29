@@ -16,7 +16,7 @@ var Toki_RichText = (function(window, $, undefined) {
 			}
 		});
 		return $content;
-	};
+	}
 
 	function buildWord(word, dictionary) {
 		var $word = $('<a>').text(word);
@@ -41,7 +41,24 @@ var Toki_RichText = (function(window, $, undefined) {
 		}
 		
 		return $word;
-	};
+	}
+	
+	// Render paragraphs inside '.auto-tokipona' blocks
+	$(function() {
+		$('.auto-tokipona').each(function () {
+			var dataDictionary = $(this).attr('data-dictionary');
+			$(this).children().each(function(index, p) {
+				var $p = $(p);
+				Toki_Cache.fetch(
+					dataDictionary || Toki_Config.INITIAL_STATE.dictionary,
+					function(dictionary) {
+						$p.replaceWith(
+							Toki_RichText.render($p.text(), dictionary));
+					}
+				);
+			});
+		});
+	});
 
 	return {
 		render: function(text, dictionary) {

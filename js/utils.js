@@ -17,12 +17,22 @@
 			console.log(message);
 		}
 	};
-	
 	$.fn.log = function(module) {
 		if (console && (($.inArray(module, Toki_Config.DEBUG_MODULES) >= 0) || module === undefined)) {
 			console.log(this);
 		}
 		
 		return this;
-	}
+	};
+	$.fn.dir = function(deep) {
+		if (console){
+			console.log(this + ':');
+			for (property in this) {
+				if (deep || this.hasOwnProperty(property)) {
+					console.log(property);
+				}
+			}
+		}
+		return this;
+	};
 })(window, jQuery);

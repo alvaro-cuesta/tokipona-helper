@@ -24,7 +24,6 @@
 	<script src="js/section/dictionaryList.js" type="text/javascript"></script>
 	<script src="js/section/dictionaryDetail.js" type="text/javascript"></script>
 	<script src="js/section/about.js" type="text/javascript"></script>
-	<script src="js/section/help.js" type="text/javascript"></script>
 </head>
 <body>
 	<div id="header">
@@ -79,12 +78,18 @@
 			<h2>Help</h2>
 			<h3>Basic usage</h3>
 			<p>Just type in the textbox and toki pona text will appear below it, just like this:</p>
-			<blockquote id="example1"></blockquote>
+			<div class="auto-tokipona" data-dictionary="dictionary/tokipona.json">
+				<p>mi sona tan ni: sina lukin e sitelen mi</p>
+			</div>
 			<p>Words are tagged with dictionary tooltips. Keep your mouse over any word to show its meaning.</p>
 			<p>Unknown/invalid words are marked in deep red.</p>
-			<blockquote id="example2"></blockquote>
+			<div class="auto-tokipona" data-dictionary="dictionary/tokipona.json">
+				<p>flux capacitor</p>
+			</div>
 			<p>Foreign (capitalized) words are marked in deep green.</p>
-			<blockquote id="example3"></blockquote>
+			<div class="auto-tokipona" data-dictionary="dictionary/tokipona.json">
+				<p>jan Awalo tan ma Epanja</p>
+			</div>
 
 			<h3>Dictionaries</h3>
 			<p>Select any dictionary in the list to enable it.</p>
