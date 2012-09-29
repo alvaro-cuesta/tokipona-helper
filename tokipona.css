@@ -12,9 +12,6 @@ html, body {
   margin-left: 50px;
   padding-left: 15px;
   border-left: 3px solid #ccc;
-} 
-.bold {
-	font-weight: bold;
 }
 ul, ol {
 	list-style-type: square;
