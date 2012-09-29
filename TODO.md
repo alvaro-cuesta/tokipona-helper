@@ -15,8 +15,6 @@
 
 ## Custom dictionaries
 - Pretty version
-- URL var `?dict=<encodedurl>` *(is this safe for clients?)*
-- Proper links in list
 
 ## UI
 - Help tooltip shouldn't be shown THIS often
