@@ -7,8 +7,6 @@
 		
 	/* Show help notification */
 	$('a#help').qtip($.extend({}, Toki_Config.TOOLTIP.NOTIFY, {
-		content: {
-			text: 'Learn here!'
-		}
+		content: {text: 'Learn here!'}
 	}));
 });})(window, jQuery);

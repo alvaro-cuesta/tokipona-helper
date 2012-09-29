@@ -45,10 +45,8 @@
 		function(data, error) {
 			$('a#dictionary')
 				.qtip($.extend({}, NOTIFY_TOOLTIP, {
-					content: {
-						text: 'Error loading the dictionary list.<br>' +
-							  'Try again in a few minutes.'
-					}
+					content: {text: 'Error loading the dictionary list.<br>' +
+									'Try again in a few minutes.'}
 			}));
 		}
 	);

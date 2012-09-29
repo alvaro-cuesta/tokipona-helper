@@ -31,10 +31,8 @@
 		},
 		function (data, error) {
 			$('a#text').qtip($.extend({}, NOTIFY_TOOLTIP, {
-				content: {
-					text: 'Error loading the text list.<br>' +
-						  'Try again in a few minutes.'
-				}
+				content: {text: 'Error loading the text list.<br>' +
+								'Try again in a few minutes.'}
 			}));
 		}
 	);

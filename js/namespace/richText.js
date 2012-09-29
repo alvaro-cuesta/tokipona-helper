@@ -25,16 +25,12 @@ var Toki_RichText = (function(window, $, undefined) {
 		if (dictionary[word]) {
 			$word.addClass('knownWord')
 				.qtip($.extend({}, Toki_Config.TOOLTIP.DICTIONARY, {
-					content: {
-						text: buildTooltipContent(word, dictionary)
-					}
+					content: {text: buildTooltipContent(word, dictionary)}
 				}));
 		} else if (firstLetter == firstLetter.toUpperCase()) {
 			$word.addClass('foreignWord')
 				.qtip($.extend({}, Toki_Config.TOOLTIP.DICTIONARY, {
-					content: {
-						text: "Foreign word."
-					}
+					content: {text: "Foreign word."}
 				}));
 		} else {
 			$word.addClass('unknownWord');

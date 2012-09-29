@@ -25,8 +25,10 @@
   - On init or also when text changes anyhow?
 - URL generation must do comparison with ALL INITIAL values
 - Proper "Link to this text" link
-- Replace textarea \n with <br>
 - Replace textarea \n\n with <p> enclosing
+
+# HTML
+- Use proper tags
   
 ## Optional
 - Fix for mobile phone

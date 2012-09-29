@@ -13,13 +13,6 @@ html, body {
   padding-left: 15px;
   border-left: 3px solid #ccc;
 }
-ul, ol {
-	list-style-type: square;
-	padding-left: 20px;
-}
-li {
-	margin-left: 10px;
-}
 /* HEADER */
 div#header {
 	background-color: black;
@@ -29,14 +22,34 @@ div#header > * {
 	color: white;
 	display: inline;
 }
-div#menu {
+/* MENU */
+div#header > div#menu {
 	padding: 15px 7px 0px 0px;
 	float: right;
+}
+div#menu a,
+div#menu a:link,
+div#menu a:visited {
+	font-weight: bold;
+	color: #ccc;
+}
+div#menu a:hover {
+	font-weight: bold;
+	color: white;
+}
+
+div#menu a:active {
+	font-weight: bold;
+	color: #aaa;
 }
 /* CONTENT */
 div#content {
 	height: 70%; /* TODO: FIX */
 	padding: 10px 20px 20px 10px;
+}
+div#content > .section {
+	display: none;
+	height: 100%;
 }
 div#content h2,
 div#content h3 {
@@ -45,48 +58,40 @@ div#content h3 {
 div#content p {
 	margin: 1px 0 0 5px;
 }
-.section {
-	display: none;
-	height: 100%;
-}
-/* TOOL */
-form#source {
-	height: 100%;
-}
-form#source textarea {
-	width: 100%;
-	height: 100%;
-	padding: 3px 3px 3px 4px;
-}
-p#dest {
-	padding: 0px 10px 10px 10px;
-}
-/* LINKS */
-a.dark, a.dark:link, a.dark:visited {
+div#content a,
+div#content a:link,
+div#content a:visited {
 	font-weight: bold;
 	color: #000;
 }
-a.dark:hover {
+div#content a:hover {
 	font-weight: bold;
 	color: #666;
 }
 
-a.dark:active {
+div#content a:active {
 	font-weight: bold;
 	color: #000;
 }
-a.light, a.light:link, a.light:visited {
-	font-weight: bold;
-	color: #ccc;
+div#content ul,
+div#content ol {
+	list-style-type: square;
+	padding-left: 20px;
 }
-a.light:hover {
-	font-weight: bold;
-	color: white;
+div#content li {
+	margin-left: 10px;
 }
-
-a.light:active {
-	font-weight: bold;
-	color: #aaa;
+/* TOOL */
+div#toolSection > form#source {
+	height: 100%;
+}
+div#toolSection > form#source textarea {
+	width: 100%;
+	height: 100%;
+	padding: 3px 3px 3px 4px;
+}
+div#toolSection > p#dest {
+	padding: 0px 10px 10px 10px;
 }
 /* WORD STYLES */
 .knownWord {

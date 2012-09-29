@@ -1,12 +1,27 @@
 var Toki_Navigation = (function(window, $, undefined) {
 	var History = window.History;
 	
+	function putState(state, replace) {
+		state = $.extend({}, History.getState().data, state||{});
+		var location = window.location,
+			action = replace ? History.replaceState : History.pushState;
+
+		action(
+			state,
+			Toki_Config.TITLE + ' (' + state.dictionary  + ')',
+			location.origin + location.pathname +
+				(state.dictionary != Toki_Config.INITIAL_STATE.dictionary ?
+					'?dict='+encodeURIComponent(state.dictionary) :
+					'')
+		);
+	}
+	
 	$.fn.linkState = function(state, hrefState) {
 		var self = this;
 		
 		self.click(function(e) {
 			state = $.extend({}, History.getState().data, state||{});
-			pushState(state);
+			putState(state);
 			e.preventDefault();
 		});
 		self.bind('focus mouseenter', function(e) {
@@ -28,21 +43,6 @@ var Toki_Navigation = (function(window, $, undefined) {
 		return self;
 	};
 	
-	function pushState(state, replace) {
-		state = $.extend({}, History.getState().data, state||{});
-		var location = window.location,
-			action = replace ? History.replaceState : History.pushState;
-
-		action(
-			state,
-			Toki_Config.TITLE + ' (' + state.dictionary  + ')',
-			location.origin + location.pathname +
-				(state.dictionary != Toki_Config.INITIAL_STATE.dictionary ?
-					'?dict='+encodeURIComponent(state.dictionary) :
-					'')
-		);
-	}
-	
 	function showSection(sectionID) {
 		sectionID = sectionID || History.getState().data.section;
 	
@@ -62,7 +62,7 @@ var Toki_Navigation = (function(window, $, undefined) {
 			getParams = $.getQueryParams(document.location.search);
 		
 		// Jump to state's section
-		pushState({
+		putState({
 			section: getParams.section || state.section,
 			dictionary: getParams.dict || state.dictionary,
 			text: getParams.text || state.text
@@ -72,7 +72,7 @@ var Toki_Navigation = (function(window, $, undefined) {
 	});
 	
 	return {
-		pushState: pushState,
-		go: function(section) {pushState({section: section});}
+		putState: putState,
+		go: function(section) {putState({section: section});}
 	};
 })(window, jQuery);

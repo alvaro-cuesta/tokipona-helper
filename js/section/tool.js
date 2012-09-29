@@ -19,10 +19,8 @@
 			function(data, error) {
 				$('a#dictionary')
 					.qtip($.extend({}, Toki_Config.NOTIFY_TOOLTIP, {
-						content: {
-							text: 'Error loading selected dictionary.<br>' +
-								  'Try again in a few minutes.'
-						}
+						content: {text: 'Error loading selected dictionary.<br>' +
+										'Try again in a few minutes.'}
 					}));
 				$textarea.attr('disabled', true);
 				$destination.hide();
@@ -46,7 +44,7 @@
 		
 		// Synchronize textarea with state
 		if (state.section != 'tool') { // If we're swtiching OUT
-			Toki_Navigation.pushState({text: $textarea.val()}, true);
+			Toki_Navigation.putState({text: $textarea.val()}, true);
 		} else { // Switching IN
 			$textarea.val(state.text);
 		}
